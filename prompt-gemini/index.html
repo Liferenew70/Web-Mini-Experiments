@@ -1,0 +1,488 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Navigateur de Prompts Gemini</title>
+    <link rel="shortcut icon" href="./favi/favicon.ico" type="image/x-icon">
+        <!-- Balises Open Graph complètes -->
+<meta property="og:title" content="Prompt pour Générateur d'image pro avec Gémini (IA).">
+<meta property="og:description" content="Explorez une collection de prompts optimisés pour le modèle IA Gemini de Google. Trouvez l'inspiration pour vos projets créatifs et améliorez vos interactions avec l'IA.">
+<meta property="og:type" content="website">
+<meta property="og:image" content="https://i.postimg.cc/GpQmLC6k/gen.jpg">
+<meta property="og:image:alt" content="Aperçu du Navigateur de Prompts Gemini">
+<meta property="og:locale" content="fr_FR">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary-color: #4A90E2; /* A nice Gemini blue */
+            --secondary-color: #8A4AE2; /* A complementary purple */
+            --background-color: #0a0e14;
+            --surface-color: #151922;
+            --surface-hover: #1d222e;
+            --text-color: #e4e8f0;
+            --text-muted-color: #8b96a8;
+            --border-color: #242b38;
+            --success-color: #10b981;
+            --danger-color: #ef4444;
+            --font-family: 'Inter', 'Segoe UI', Tahoma, sans-serif;
+            --border-radius: 16px;
+            --border-radius-sm: 12px;
+            --box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
+            --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            background-color: var(--background-color);
+            color: var(--text-color);
+            font-family: var(--font-family);
+            line-height: 1.6;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem 0;
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 2.5rem;
+        }
+
+        .logo {
+            display: inline-flex;
+            align-items: center;
+            gap: 14px;
+            font-size: 2.2rem;
+            font-weight: 800;
+        }
+
+        .logo i {
+            font-size: 2.8rem;
+            color: var(--primary-color);
+            filter: drop-shadow(0 0 15px var(--primary-color));
+        }
+
+        .actions-container {
+            background: var(--surface-color);
+            padding: 2rem;
+            border-radius: var(--border-radius);
+            box-shadow: var(--box-shadow);
+            border: 1px solid var(--border-color);
+            display: flex;
+            justify-content: center;
+            gap: 1.5rem;
+            margin-bottom: 2.5rem;
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            padding: 0.9rem 2rem;
+            border: none;
+            border-radius: var(--border-radius-sm);
+            font-weight: 700;
+            cursor: pointer;
+            transition: var(--transition);
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.8rem;
+            font-size: 1rem;
+            text-decoration: none;
+        }
+        .btn:hover { transform: translateY(-3px); box-shadow: 0 8px 24px rgba(0,0,0,0.3); }
+
+        .btn-primary {
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            color: #fff;
+        }
+        .btn-secondary {
+            background-color: var(--surface-hover);
+            color: var(--text-color);
+            border: 1px solid var(--border-color);
+        }
+
+        .search-container {
+            margin-bottom: 2.5rem;
+            position: relative;
+        }
+        .search-input {
+            width: 100%;
+            padding: 1.2rem 1.5rem 1.2rem 3.5rem;
+            border: 2px solid var(--border-color);
+            border-radius: var(--border-radius-sm);
+            font-size: 1.1rem;
+            background: var(--surface-color);
+            color: var(--text-color);
+            transition: var(--transition);
+        }
+        .search-input:focus {
+            outline: none;
+            border-color: var(--primary-color);
+            box-shadow: 0 0 0 4px rgba(74, 144, 226, 0.2);
+        }
+        .search-icon {
+            position: absolute;
+            left: 1.2rem;
+            top: 50%;
+            transform: translateY(-50%);
+            color: var(--text-muted-color);
+            font-size: 1.2rem;
+        }
+        
+        #prompts-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+            gap: 1.5rem;
+        }
+        
+        .prompt-card {
+            background: var(--surface-color);
+            border-radius: var(--border-radius-sm);
+            padding: 1.5rem;
+            border: 1px solid var(--border-color);
+            display: flex;
+            flex-direction: column;
+            transition: var(--transition);
+        }
+        .prompt-card:hover {
+            transform: translateY(-5px);
+            border-color: var(--primary-color);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+        }
+        
+        .prompt-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            gap: 1rem;
+            margin-bottom: 1rem;
+        }
+        
+        .prompt-title {
+            font-size: 1.2rem;
+            font-weight: 600;
+            flex-grow: 1;
+        }
+
+        .copy-btn {
+            background: var(--surface-hover);
+            border: 1px solid var(--border-color);
+            color: var(--text-muted-color);
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            cursor: pointer;
+            transition: var(--transition);
+            flex-shrink: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .copy-btn:hover {
+            background: var(--primary-color);
+            color: #fff;
+            transform: scale(1.1);
+        }
+        
+        .prompt-content {
+            background: var(--background-color);
+            padding: 1rem;
+            border-radius: var(--border-radius-sm);
+            font-family: 'Courier New', Courier, monospace;
+            font-size: 0.9rem;
+            white-space: pre-wrap;
+            word-break: break-word;
+            color: var(--text-muted-color);
+            flex-grow: 1;
+        }
+
+        .toast {
+            position: fixed;
+            bottom: -100px;
+            left: 50%;
+            transform: translateX(-50%);
+            background-color: var(--success-color);
+            color: white;
+            padding: 1rem 1.5rem;
+            border-radius: var(--border-radius-sm);
+            box-shadow: var(--box-shadow);
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            transition: bottom 0.5s ease, background-color 0.3s ease;
+            z-index: 3000;
+        }
+        .toast.show { bottom: 30px; }
+        .toast.error { background-color: var(--danger-color); }
+
+        footer {
+            text-align: center;
+            padding: 2.5rem 0;
+            margin-top: 3rem;
+            color: var(--text-muted-color);
+            border-top: 1px solid var(--border-color);
+        }
+        .footer-links {
+            display: flex;
+            gap: 2rem;
+            justify-content: center;
+            margin-bottom: 1.5rem;
+        }
+        .footer-links a {
+            color: var(--text-muted-color);
+            font-size: 1.6rem;
+            transition: var(--transition);
+        }
+        .footer-links a:hover {
+            color: var(--primary-color);
+            transform: translateY(-4px);
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <header>
+            <div class="logo">
+                <i class="fas fa-robot"></i>
+                <span>Navigateur de Prompts Gemini</span>
+            </div>
+        </header>
+
+        <main>
+            <div class="actions-container">
+                <button id="load-default-btn" class="btn btn-primary">
+                    <i class="fas fa-download"></i>
+                    <span>Charger les prompts Gemini par défaut</span>
+                </button>
+                <button id="load-custom-btn" class="btn btn-secondary">
+                    <i class="fas fa-file-upload"></i>
+                    <span>Choisir un fichier JSON</span>
+                </button>
+                <input type="file" id="file-input" accept=".json" style="display: none;">
+            </div>
+
+            <div class="search-container">
+                <i class="fas fa-search search-icon"></i>
+                <input type="text" id="search-input" class="search-input" placeholder="Rechercher un prompt par titre ou contenu...">
+            </div>
+
+            <div id="prompts-container">
+                <!-- Les cartes de prompts seront injectées ici -->
+            </div>
+        </main>
+    </div>
+
+    <footer>
+        <div class="footer-links">
+            <a href="https://wa.me/2250719030672?text=Salut%20_*Tour%C3%A9%20Junior*_%2C%0Aje%20viens%20de%20votre%20site%20de%20prompt%20g%C3%A9mini.%0A*il%20a%20%C3%A9t%C3%A9%20bien%20pens%C3%A9%2C%20merci%20bien*%0Aaviez%20vous%20d%27autre%20site%20%3F" target="_blank" rel="noopener noreferrer" title="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+            <a href="mailto:es2iprompter@gmail.com" title="Gmail"><i class="fas fa-envelope"></i></a>
+            <a href="https://jokersmilerprojet.netlify.app/tousmessites/" target="_blank" rel="noopener noreferrer" title="Mon Portfolio"><i class="fas fa-briefcase"></i></a>
+            <a href="https://jokersmilerimggen.netlify.app/" target="_blank" rel="noopener noreferrer" title="Générer image avec ia par whatsapp"><i class="fas fa-brain"></i></a>
+        </div>
+        <p>&copy; 2025 Prompt Navigator. Tous droits réservés.</p>
+    </footer>
+
+    <div id="toast" class="toast">
+        <i id="toast-icon" class="fas fa-check-circle"></i>
+        <span id="toast-message"></span>
+    </div>
+
+    <script>
+    document.addEventListener('DOMContentLoaded', function() {
+        
+        let allPrompts = [];
+
+        const UIElements = {
+            loadDefaultBtn: document.getElementById('load-default-btn'),
+            loadCustomBtn: document.getElementById('load-custom-btn'),
+            fileInput: document.getElementById('file-input'),
+            searchInput: document.getElementById('search-input'),
+            promptsContainer: document.getElementById('prompts-container'),
+            toast: {
+                element: document.getElementById('toast'),
+                message: document.getElementById('toast-message'),
+                icon: document.getElementById('toast-icon')
+            }
+        };
+
+        // --- FUNCTIONS ---
+
+        function showToast(message, type = 'success') {
+            UIElements.toast.message.textContent = message;
+            if (type === 'error') {
+                UIElements.toast.element.classList.add('error');
+                UIElements.toast.icon.className = 'fas fa-times-circle';
+            } else {
+                UIElements.toast.element.classList.remove('error');
+                UIElements.toast.icon.className = 'fas fa-check-circle';
+            }
+            UIElements.toast.element.classList.add('show');
+            setTimeout(() => {
+                UIElements.toast.element.classList.remove('show');
+            }, 3000);
+        }
+
+        /**
+         * Fallback function to copy text for older browsers or insecure contexts.
+         * @param {string} text The text to copy.
+         */
+        function fallbackCopyTextToClipboard(text) {
+            const textArea = document.createElement("textarea");
+            textArea.value = text;
+            
+            // Make the textarea invisible and prevent screen scrolling
+            textArea.style.top = "0";
+            textArea.style.left = "0";
+            textArea.style.position = "fixed";
+            textArea.style.opacity = "0";
+
+            document.body.appendChild(textArea);
+            textArea.focus();
+            textArea.select();
+
+            try {
+                const successful = document.execCommand('copy');
+                if (successful) {
+                    showToast('Prompt copié dans le presse-papiers !');
+                } else {
+                    showToast('La copie a échoué.', 'error');
+                }
+            } catch (err) {
+                showToast('La copie a échoué.', 'error');
+                console.error('Fallback: Oops, unable to copy', err);
+            }
+
+            document.body.removeChild(textArea);
+        }
+
+        /**
+         * Robust function to copy text to clipboard, using modern API with a fallback.
+         * @param {string} text The text to copy.
+         */
+        function copyToClipboard(text) {
+            // Use modern Clipboard API if available and in a secure context
+            if (navigator.clipboard && window.isSecureContext) {
+                navigator.clipboard.writeText(text).then(() => {
+                    showToast('Prompt copié dans le presse-papiers !');
+                }).catch(err => {
+                    console.error('Could not copy text with navigator.clipboard: ', err);
+                    fallbackCopyTextToClipboard(text); // Try fallback if modern method fails
+                });
+            } else {
+                // Use the fallback for older browsers or insecure (HTTP) contexts
+                fallbackCopyTextToClipboard(text);
+            }
+        }
+
+        function displayPrompts(promptsToDisplay) {
+            UIElements.promptsContainer.innerHTML = ''; 
+
+            if (!promptsToDisplay || promptsToDisplay.length === 0) {
+                UIElements.promptsContainer.innerHTML = '<p style="color: var(--text-muted-color); text-align: center;">Aucun prompt à afficher. Chargez un fichier pour commencer.</p>';
+                return;
+            }
+
+            promptsToDisplay.forEach(prompt => {
+                let promptContent = '';
+                try {
+                    const innerData = JSON.parse(prompt.prompt);
+                    promptContent = innerData.prompt || "Contenu du prompt invalide.";
+                } catch (e) {
+                    promptContent = prompt.prompt;
+                }
+
+                const card = document.createElement('div');
+                card.className = 'prompt-card';
+                card.innerHTML = `
+                    <div class="prompt-header">
+                        <h3 class="prompt-title">${prompt.title}</h3>
+                        <button class="copy-btn" title="Copier le prompt">
+                            <i class="fas fa-copy"></i>
+                        </button>
+                    </div>
+                    <pre class="prompt-content">${promptContent.trim()}</pre>
+                `;
+                
+                card.querySelector('.copy-btn').addEventListener('click', () => {
+                    copyToClipboard(promptContent);
+                });
+
+                UIElements.promptsContainer.appendChild(card);
+            });
+        }
+
+        function handleSearch() {
+            const searchTerm = UIElements.searchInput.value.toLowerCase();
+            if (!allPrompts) return;
+
+            const filteredPrompts = allPrompts.filter(prompt => {
+                const titleMatch = prompt.title.toLowerCase().includes(searchTerm);
+                const contentMatch = prompt.prompt.toLowerCase().includes(searchTerm);
+                return titleMatch || contentMatch;
+            });
+            displayPrompts(filteredPrompts);
+        }
+
+        function processJsonData(data) {
+            if (Array.isArray(data) && data.length > 0 && data[0].prompts) {
+                allPrompts = data[0].prompts;
+                displayPrompts(allPrompts);
+                showToast(`${allPrompts.length} prompts chargés avec succès !`);
+            } else {
+                throw new Error("La structure du fichier JSON est invalide.");
+            }
+        }
+
+        async function loadDefaultPrompts() {
+            try {
+                const response = await fetch('gemini.json');
+                if (!response.ok) {
+                    throw new Error(`Le fichier gemini.json n'a pas pu être chargé (statut: ${response.status})`);
+                }
+                const data = await response.json();
+                processJsonData(data);
+            } catch (error) {
+                console.error('Erreur lors du chargement des prompts par défaut:', error);
+                showToast('Erreur: ' + error.message, 'error');
+            }
+        }
+
+        function handleFileUpload(event) {
+            const file = event.target.files[0];
+            if (!file) return;
+
+            const reader = new FileReader();
+            reader.onload = function(e) {
+                try {
+                    const data = JSON.parse(e.target.result);
+                    processJsonData(data);
+                } catch (error) {
+                    console.error('Erreur lors de la lecture du fichier JSON:', error);
+                    showToast('Erreur: Fichier JSON invalide. ' + error.message, 'error');
+                }
+            };
+            reader.readAsText(file);
+        }
+
+        function setupEventListeners() {
+            UIElements.loadDefaultBtn.addEventListener('click', loadDefaultPrompts);
+            UIElements.loadCustomBtn.addEventListener('click', () => UIElements.fileInput.click());
+            UIElements.fileInput.addEventListener('change', handleFileUpload);
+            UIElements.searchInput.addEventListener('input', handleSearch);
+        }
+
+        setupEventListeners();
+        displayPrompts([]);
+    });
+    </script>
+</body>
+</html>

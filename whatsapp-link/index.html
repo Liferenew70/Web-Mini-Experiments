@@ -1,0 +1,759 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+<!-- Balises Open Graph complètes -->
+<meta property="og:title" content="Générateur de Liens WhatsApp Pro">
+<meta property="og:description" content="Créez facilement des liens WhatsApp personnalisés avec des messages pré-remplis. Partagez rapidement votre contact et message via WhatsApp.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://jokerwattinlink.netlify.app/">
+<meta property="og:image" content="https://i.postimg.cc/0NVB5KQ2/waht.jpg">
+<meta property="og:image:alt" content="Aperçu du Générateur de Liens WhatsApp Pro">
+<meta property="og:locale" content="fr_FR">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Générateur de Liens WhatsApp Pro</title>
+    <link rel="shortcut icon" href="./fav/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary-color: #25D366; /* WhatsApp Green */
+            --secondary-color: #128C7E; /* Darker WhatsApp Green */
+            --background-color: #0a0e14;
+            --surface-color: #151922;
+            --surface-hover: #1d222e;
+            --text-color: #e4e8f0;
+            --text-muted-color: #8b96a8;
+            --border-color: #242b38;
+            --success-color: #10b981;
+            --danger-color: #ef4444;
+            --warning-color: #f59e0b;
+            --font-family: 'Inter', 'Segoe UI', Tahoma, sans-serif;
+            --border-radius: 16px;
+            --border-radius-sm: 12px;
+            --box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
+            --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            background-color: var(--background-color);
+            color: var(--text-color);
+            font-family: var(--font-family);
+            line-height: 1.6;
+            overflow-x: hidden;
+            transition: var(--transition);
+        }
+
+        .container {
+            width: 90%;
+            max-width: 900px;
+            margin: 0 auto;
+            position: relative;
+            z-index: 1;
+        }
+
+        header {
+            padding: 1.2rem 0;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            background: rgba(10, 14, 20, 0.85);
+            backdrop-filter: blur(20px) saturate(180%);
+            border-bottom: 1px solid var(--border-color);
+            box-shadow: 0 4px 24px rgba(0, 0, 0, 0.1);
+        }
+
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 14px;
+            font-size: 1.6rem;
+            font-weight: 800;
+            color: var(--text-color);
+        }
+
+        .logo i {
+            font-size: 2.2rem;
+            color: var(--primary-color);
+            filter: drop-shadow(0 0 15px var(--primary-color));
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 0.5rem;
+        }
+
+        nav a {
+            color: var(--text-color);
+            text-decoration: none;
+            font-weight: 600;
+            padding: 0.7rem 1.4rem;
+            border-radius: var(--border-radius-sm);
+            transition: var(--transition);
+        }
+
+        nav a:hover {
+            background-color: rgba(37, 211, 102, 0.1);
+            color: var(--primary-color);
+        }
+
+        nav a.active {
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            color: #fff;
+            font-weight: 700;
+        }
+
+        main {
+            min-height: calc(100vh - 220px); /* Adjusted for footer */
+            padding: 3rem 0;
+        }
+
+        .page { display: none; }
+        .page.active { display: block; animation: pageSlideIn 0.5s ease-out; }
+
+        @keyframes pageSlideIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .page-title {
+            text-align: center;
+            margin-bottom: 2.5rem;
+            font-size: 2.5rem;
+            font-weight: 800;
+        }
+
+        .form-container {
+            background: var(--surface-color);
+            padding: 3rem;
+            border-radius: var(--border-radius);
+            box-shadow: var(--box-shadow);
+            border: 1px solid var(--border-color);
+        }
+
+        .form-group { margin-bottom: 2rem; }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 0.8rem;
+            font-weight: 600;
+            font-size: 1rem;
+        }
+
+        .form-control {
+            width: 100%;
+            padding: 1rem 1.3rem;
+            border: 2px solid var(--border-color);
+            border-radius: var(--border-radius-sm);
+            font-size: 1rem;
+            transition: var(--transition);
+            background: var(--background-color);
+            color: var(--text-color);
+        }
+
+        .form-control:focus {
+            outline: none;
+            border-color: var(--primary-color);
+            box-shadow: 0 0 0 4px rgba(37, 211, 102, 0.2);
+        }
+        
+        textarea.form-control { min-height: 180px; resize: vertical; }
+
+        .btn {
+            padding: 0.9rem 2rem;
+            border: none;
+            border-radius: var(--border-radius-sm);
+            font-weight: 700;
+            cursor: pointer;
+            transition: var(--transition);
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.8rem;
+            text-decoration: none;
+            font-size: 1rem;
+        }
+
+        .btn:hover { transform: translateY(-3px); box-shadow: 0 8px 24px rgba(0,0,0,0.3); }
+
+        .btn-primary {
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            color: #fff;
+        }
+        .btn-secondary {
+            background-color: var(--surface-hover);
+            color: var(--text-color);
+        }
+        .btn-danger {
+            background: var(--danger-color);
+            color: #fff;
+        }
+
+        .result-container {
+            margin-top: 2.5rem;
+            background: var(--background-color);
+            padding: 2rem;
+            border-radius: var(--border-radius);
+            border: 1px solid var(--border-color);
+            display: none;
+        }
+        .result-container h3 { margin-bottom: 1rem; }
+        .result-box {
+            background: var(--surface-color);
+            padding: 1rem;
+            border-radius: var(--border-radius-sm);
+            word-break: break-all;
+            margin-bottom: 1.5rem;
+            border-left: 4px solid var(--primary-color);
+        }
+        .result-box a { color: var(--primary-color); text-decoration: none; font-weight: 500;}
+        .result-box a:hover { text-decoration: underline; }
+
+        .decrypted-text-box {
+            background: var(--background-color);
+            padding: 1.5rem;
+            border-radius: var(--border-radius-sm);
+            white-space: pre-wrap; /* Crucial for newlines and spaces */
+            word-break: break-word;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            min-height: 100px;
+            border: 1px solid var(--border-color);
+        }
+
+        /* History Page Styles */
+        .history-actions {
+            display: flex;
+            gap: 1rem;
+            margin-bottom: 2rem;
+            flex-wrap: wrap;
+            justify-content: flex-end;
+        }
+        .history-list {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
+        .history-item {
+            background: var(--surface-color);
+            border-radius: var(--border-radius-sm);
+            padding: 1.5rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 1.5rem;
+            transition: var(--transition);
+            border-left: 3px solid transparent;
+        }
+        .history-item:hover {
+            transform: translateX(5px);
+            border-left-color: var(--primary-color);
+        }
+        .history-item-content { flex: 1; word-break: break-all; }
+        .history-item-content a { color: var(--primary-color); text-decoration: none; }
+        .history-item-content span {
+            display: block;
+            font-size: 0.85rem;
+            color: var(--text-muted-color);
+            margin-top: 0.5rem;
+        }
+        .history-item-delete {
+            background: none;
+            border: none;
+            color: var(--text-muted-color);
+            cursor: pointer;
+            font-size: 1.2rem;
+            transition: var(--transition);
+            padding: 0.5rem;
+        }
+        .history-item-delete:hover { color: var(--danger-color); transform: scale(1.2); }
+
+        /* Toast & Alert Styles */
+        .toast {
+            position: fixed;
+            bottom: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: linear-gradient(135deg, var(--success-color), color-mix(in srgb, var(--success-color) 70%, black));
+            color: white;
+            padding: 1rem 1.5rem;
+            border-radius: var(--border-radius-sm);
+            box-shadow: var(--box-shadow);
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            z-index: 2000;
+            opacity: 0;
+            transition: all 0.4s ease;
+            visibility: hidden;
+        }
+        .toast.show { opacity: 1; visibility: visible; bottom: 30px; }
+        .toast i { font-size: 1.3rem; }
+
+        .custom-alert-overlay {
+            position: fixed; top: 0; left: 0; width: 100%; height: 100%;
+            background-color: rgba(0, 0, 0, 0.7); backdrop-filter: blur(8px);
+            z-index: 9998; display: flex; justify-content: center; align-items: center;
+            opacity: 0; visibility: hidden; transition: opacity 0.3s ease, visibility 0.3s ease;
+        }
+        .custom-alert-overlay.show { opacity: 1; visibility: visible; }
+        .custom-alert-box {
+            background: var(--surface-color); padding: 2.5rem;
+            border-radius: var(--border-radius); box-shadow: var(--box-shadow);
+            border: 1px solid var(--border-color); width: 90%; max-width: 500px;
+            text-align: center; transform: scale(0.9); transition: transform 0.3s ease;
+        }
+        .custom-alert-overlay.show .custom-alert-box { transform: scale(1); }
+        .custom-alert-box h3 { font-size: 1.6rem; margin-bottom: 1rem; }
+        .custom-alert-box p { color: var(--text-muted-color); margin-bottom: 2rem; }
+        .custom-alert-buttons { display: flex; justify-content: center; gap: 1rem; }
+
+        footer {
+            text-align: center;
+            padding: 2.5rem 0;
+            margin-top: 3rem;
+            color: var(--text-muted-color);
+            border-top: 1px solid var(--border-color);
+        }
+        .footer-links {
+            display: flex;
+            gap: 2rem;
+            justify-content: center;
+            margin-bottom: 1.5rem;
+        }
+        .footer-links a {
+            color: var(--text-muted-color);
+            font-size: 1.6rem;
+            transition: var(--transition);
+        }
+        .footer-links a:hover {
+            color: var(--primary-color);
+            transform: translateY(-4px);
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container header-content">
+            <div class="logo">
+                <i class="fab fa-whatsapp"></i>
+                <span>WA Link Gen</span>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="#" class="nav-link active" data-page="home">Accueil</a></li>
+                    <li><a href="#" class="nav-link" data-page="decrypt">Décrypter Lien</a></li>
+                    <li><a href="#" class="nav-link" data-page="history">Historique</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container">
+        <!-- Home Page -->
+        <section id="home" class="page active">
+            <h1 class="page-title">Générateur de Lien WhatsApp</h1>
+            <div class="form-container">
+                <form id="link-generator-form">
+                    <div class="form-group">
+                        <label for="phone-number">Numéro de téléphone (avec + et indicatif)</label>
+                        <input type="tel" id="phone-number" class="form-control" placeholder="Ex: +2250719030672" required pattern="\+[0-9]+">
+                    </div>
+                    <div class="form-group">
+                        <label for="message-text">Votre message</label>
+                        <textarea id="message-text" class="form-control" placeholder="Collez votre texte ici, avec des emojis si vous le souhaitez..." required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary">
+                        <i class="fas fa-link"></i>
+                        <span>Générer le lien</span>
+                    </button>
+                </form>
+
+                <div id="result-container" class="result-container">
+                    <h3>Votre lien est prêt !</h3>
+                    <div class="result-box">
+                        <a href="#" id="generated-link" target="_blank" rel="noopener noreferrer"></a>
+                    </div>
+                    <button id="copy-link-btn" class="btn btn-secondary">
+                        <i class="fas fa-copy"></i>
+                        <span>Copier</span>
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Decrypt Page -->
+        <section id="decrypt" class="page">
+            <h1 class="page-title">Décrypter un Lien WhatsApp</h1>
+            <div class="form-container">
+                <form id="decrypt-form">
+                    <div class="form-group">
+                        <label for="link-to-decrypt">Lien WhatsApp à décrypter</label>
+                        <textarea id="link-to-decrypt" class="form-control" placeholder="Collez le lien wa.me ici..." required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary">
+                        <i class="fas fa-search"></i>
+                        <span>Décrypter le message</span>
+                    </button>
+                </form>
+
+                <div id="decrypt-result-container" class="result-container">
+                    <h3>Message décrypté :</h3>
+                    <div id="decrypted-text-box" class="decrypted-text-box"></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- History Page -->
+        <section id="history" class="page">
+            <h1 class="page-title">Historique des liens</h1>
+            <div class="history-actions">
+                <button id="import-history-btn" class="btn btn-secondary"><i class="fas fa-file-import"></i> Importer</button>
+                <input type="file" id="import-file-input" accept=".json" style="display: none;">
+                <button id="export-history-btn" class="btn btn-secondary"><i class="fas fa-file-export"></i> Exporter</button>
+                <button id="delete-all-history-btn" class="btn btn-danger"><i class="fas fa-trash"></i> Tout supprimer</button>
+            </div>
+            <div id="history-list-container" class="history-list">
+                <!-- History items will be injected here -->
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-links">
+            <a href="https://wa.me/2250719030672" target="_blank" rel="noopener noreferrer" title="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+            <a href="https://t.me/JOADOS" target="_blank" rel="noopener noreferrer" title="Telegram"><i class="fab fa-telegram"></i></a>
+            <a href="mailto:es2iprompter@gmail.com" title="Gmail"><i class="fas fa-envelope"></i></a>
+            <a href="https://jokersmilerprojet.netlify.app/cv%20junior%20pro/" target="_blank" rel="noopener noreferrer" title="Mon portfolio"><i class="fas fa-globe"></i></a>
+            <a href="https://jokersmilerimggen.netlify.app/" target="_blank" rel="noopener noreferrer" title="Générateur d'image"><i class="fas fa-brain"></i></a>
+        </div>
+        <p>&copy; 2025 WA Link Gen. Outil créé avec soin, par Touré Junior.</p>
+    </footer>
+
+    <div id="toast" class="toast">
+        <i id="toast-icon" class="fas fa-check-circle"></i>
+        <span id="toast-message"></span>
+    </div>
+
+    <div id="custom-alert-overlay" class="custom-alert-overlay">
+        <div class="custom-alert-box">
+            <h3 id="custom-alert-title"></h3>
+            <p id="custom-alert-message"></p>
+            <div class="custom-alert-buttons">
+                <button id="custom-alert-cancel" class="btn btn-secondary">Annuler</button>
+                <button id="custom-alert-confirm" class="btn btn-danger">Confirmer</button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+    document.addEventListener('DOMContentLoaded', function() {
+
+        // --- STATE MANAGEMENT ---
+        const appState = {
+            currentPage: 'home',
+            historyData: []
+        };
+
+        // --- UI ELEMENTS ---
+        const UIElements = {
+            pages: document.querySelectorAll('.page'),
+            navLinks: document.querySelectorAll('.nav-link'),
+            // Generator Page
+            form: document.getElementById('link-generator-form'),
+            phoneNumberInput: document.getElementById('phone-number'),
+            messageTextInput: document.getElementById('message-text'),
+            resultContainer: document.getElementById('result-container'),
+            generatedLink: document.getElementById('generated-link'),
+            copyLinkBtn: document.getElementById('copy-link-btn'),
+            // Decrypt Page
+            decryptForm: document.getElementById('decrypt-form'),
+            decryptLinkInput: document.getElementById('link-to-decrypt'),
+            decryptResultContainer: document.getElementById('decrypt-result-container'),
+            decryptedTextBox: document.getElementById('decrypted-text-box'),
+            // History Page
+            historyListContainer: document.getElementById('history-list-container'),
+            deleteAllHistoryBtn: document.getElementById('delete-all-history-btn'),
+            exportHistoryBtn: document.getElementById('export-history-btn'),
+            importHistoryBtn: document.getElementById('import-history-btn'),
+            importFileInput: document.getElementById('import-file-input'),
+            // Shared UI
+            toast: {
+                element: document.getElementById('toast'),
+                icon: document.getElementById('toast-icon'),
+                message: document.getElementById('toast-message')
+            },
+            alert: {
+                overlay: document.getElementById('custom-alert-overlay'),
+                title: document.getElementById('custom-alert-title'),
+                message: document.getElementById('custom-alert-message'),
+                confirmBtn: document.getElementById('custom-alert-confirm'),
+                cancelBtn: document.getElementById('custom-alert-cancel'),
+            }
+        };
+
+        // --- CORE LOGIC ---
+        function init() {
+            loadDataFromStorage();
+            setupEventListeners();
+            navigateTo('home');
+        }
+
+        function loadDataFromStorage() {
+            const savedHistory = localStorage.getItem('waLinkHistory');
+            appState.historyData = savedHistory ? JSON.parse(savedHistory) : [];
+        }
+
+        function saveDataToStorage() {
+            localStorage.setItem('waLinkHistory', JSON.stringify(appState.historyData));
+        }
+
+        function navigateTo(pageId) {
+            appState.currentPage = pageId;
+            UIElements.pages.forEach(p => p.classList.toggle('active', p.id === pageId));
+            UIElements.navLinks.forEach(l => l.classList.toggle('active', l.dataset.page === pageId));
+            render();
+        }
+
+        function render() {
+            if (appState.currentPage === 'history') {
+                displayHistoryPage();
+            }
+            if(appState.currentPage !== 'decrypt'){
+                UIElements.decryptResultContainer.style.display = 'none';
+            }
+        }
+        
+        function handleFormSubmit(e) {
+            e.preventDefault();
+            const phone = UIElements.phoneNumberInput.value.replace(/[^0-9+]/g, '');
+            const message = UIElements.messageTextInput.value;
+
+            if (!phone.startsWith('+') || phone.length < 10) {
+                showToast("Numéro de téléphone invalide. Il doit commencer par '+' et inclure l'indicatif.", 'error');
+                return;
+            }
+
+            const encodedMessage = encodeURIComponent(message);
+            const fullLink = `https://wa.me/${phone.substring(1)}?text=${encodedMessage}`;
+            
+            UIElements.generatedLink.href = fullLink;
+            UIElements.generatedLink.textContent = fullLink;
+            UIElements.resultContainer.style.display = 'block';
+
+            addToHistory(fullLink);
+        }
+
+        function handleDecryptSubmit(e) {
+            e.preventDefault();
+            const link = UIElements.decryptLinkInput.value.trim();
+            if (!link) {
+                showToast("Veuillez coller un lien à décrypter.", 'warning');
+                return;
+            }
+            try {
+                const url = new URL(link);
+                const text = url.searchParams.get('text');
+
+                if (text === null) {
+                    showToast("Ce lien ne contient pas de message textuel.", "warning");
+                    UIElements.decryptResultContainer.style.display = 'none';
+                    return;
+                }
+
+                const decodedText = decodeURIComponent(text.replace(/\+/g, ' '));
+                UIElements.decryptedTextBox.textContent = decodedText;
+                UIElements.decryptResultContainer.style.display = 'block';
+
+            } catch (error) {
+                showToast("Le lien fourni est invalide ou mal formaté.", "error");
+                UIElements.decryptResultContainer.style.display = 'none';
+            }
+        }
+
+
+        function addToHistory(link) {
+            const newEntry = {
+                id: Date.now(),
+                link: link,
+                date: new Date().toISOString()
+            };
+            appState.historyData.unshift(newEntry); 
+            saveDataToStorage();
+        }
+
+        // --- HISTORY PAGE LOGIC ---
+        function displayHistoryPage() {
+            UIElements.historyListContainer.innerHTML = '';
+            if (appState.historyData.length === 0) {
+                UIElements.historyListContainer.innerHTML = '<p>Votre historique est vide.</p>';
+                return;
+            }
+
+            appState.historyData.forEach(item => {
+                const historyItem = document.createElement('div');
+                historyItem.className = 'history-item';
+                const formattedDate = new Date(item.date).toLocaleString('fr-FR', {
+                    dateStyle: 'medium',
+                    timeStyle: 'short'
+                });
+                historyItem.innerHTML = `
+                    <div class="history-item-content">
+                        <a href="${item.link}" target="_blank" rel="noopener noreferrer">${item.link}</a>
+                        <span>Créé le: ${formattedDate}</span>
+                    </div>
+                    <button class="history-item-delete" data-id="${item.id}" title="Supprimer cette entrée">
+                        <i class="fas fa-trash-alt"></i>
+                    </button>
+                `;
+                UIElements.historyListContainer.appendChild(historyItem);
+            });
+        }
+        
+        async function deleteHistoryItem(id) {
+            const confirmed = await showConfirmation("Supprimer l'entrée ?", "Cette action est irréversible.");
+            if (confirmed) {
+                appState.historyData = appState.historyData.filter(item => item.id !== id);
+                saveDataToStorage();
+                render();
+                showToast("Entrée supprimée.", "success");
+            }
+        }
+        
+        async function deleteAllHistory() {
+            if (appState.historyData.length === 0) {
+                showToast("L'historique est déjà vide.", "warning");
+                return;
+            }
+            const confirmed = await showConfirmation("Vider l'historique ?", "Toutes les entrées seront supprimées définitivement.");
+            if (confirmed) {
+                appState.historyData = [];
+                saveDataToStorage();
+                render();
+                showToast("Historique vidé.", "success");
+            }
+        }
+        
+        // --- DATA MANAGEMENT ---
+        function handleExportData() {
+            if (appState.historyData.length === 0) {
+                showToast("L'historique est vide, rien à exporter.", "warning");
+                return;
+            }
+            const dataStr = JSON.stringify(appState.historyData, null, 2);
+            const blob = new Blob([dataStr], { type: "application/json" });
+            const url = URL.createObjectURL(blob);
+            const a = document.createElement("a");
+            a.href = url;
+            a.download = `walink-history-${new Date().toISOString().slice(0,10)}.json`;
+            a.click();
+            URL.revokeObjectURL(url);
+            showToast("Historique exporté.", "success");
+        }
+        
+        function handleImportData(event) {
+            const file = event.target.files[0];
+            if (!file) return;
+            const reader = new FileReader();
+            reader.onload = e => {
+                try {
+                    const importedData = JSON.parse(e.target.result);
+                    if (Array.isArray(importedData) && importedData.every(item => 'id' in item && 'link' in item && 'date' in item)) {
+                        appState.historyData = importedData;
+                        saveDataToStorage();
+                        render();
+                        showToast("Historique importé avec succès.", "success");
+                    } else {
+                        throw new Error("Format de fichier invalide.");
+                    }
+                } catch (err) {
+                    showToast("Erreur lors de l'importation du fichier.", "error");
+                }
+            };
+            reader.readAsText(file);
+        }
+
+        // --- EVENT LISTENERS ---
+        function setupEventListeners() {
+            UIElements.navLinks.forEach(link => {
+                link.addEventListener('click', (e) => {
+                    e.preventDefault();
+                    navigateTo(e.target.dataset.page);
+                });
+            });
+
+            UIElements.form.addEventListener('submit', handleFormSubmit);
+            UIElements.decryptForm.addEventListener('submit', handleDecryptSubmit);
+
+            UIElements.copyLinkBtn.addEventListener('click', () => {
+                navigator.clipboard.writeText(UIElements.generatedLink.href).then(() => {
+                    showToast('Lien copié dans le presse-papiers !', 'success');
+                }, () => {
+                    showToast('La copie a échoué.', 'error');
+                });
+            });
+
+            UIElements.deleteAllHistoryBtn.addEventListener('click', deleteAllHistory);
+
+            UIElements.historyListContainer.addEventListener('click', (e) => {
+                const deleteBtn = e.target.closest('.history-item-delete');
+                if (deleteBtn) {
+                    const id = Number(deleteBtn.dataset.id);
+                    deleteHistoryItem(id);
+                }
+            });
+            
+            UIElements.exportHistoryBtn.addEventListener('click', handleExportData);
+            UIElements.importHistoryBtn.addEventListener('click', () => UIElements.importFileInput.click());
+            UIElements.importFileInput.addEventListener('change', handleImportData);
+        }
+
+        // --- UI HELPERS ---
+        function showToast(message, type = 'success') {
+            UIElements.toast.message.textContent = message;
+            const colors = { success: 'var(--success-color)', error: 'var(--danger-color)', warning: 'var(--warning-color)' };
+            const icons = { success: 'fa-check-circle', error: 'fa-times-circle', warning: 'fa-exclamation-triangle' };
+            
+            UIElements.toast.element.style.background = `linear-gradient(135deg, ${colors[type]}, color-mix(in srgb, ${colors[type]} 70%, black))`;
+            UIElements.toast.icon.className = `fas ${icons[type] || icons['success']}`;
+            
+            UIElements.toast.element.classList.add('show');
+            setTimeout(() => UIElements.toast.element.classList.remove('show'), 3000);
+        }
+
+        function showConfirmation(title, message) {
+            return new Promise(resolve => {
+                UIElements.alert.title.textContent = title;
+                UIElements.alert.message.textContent = message;
+
+                const cleanup = () => {
+                    UIElements.alert.overlay.classList.remove('show');
+                    UIElements.alert.confirmBtn.removeEventListener('click', confirmHandler);
+                    UIElements.alert.cancelBtn.removeEventListener('click', cancelHandler);
+                };
+                const confirmHandler = () => { cleanup(); resolve(true); };
+                const cancelHandler = () => { cleanup(); resolve(false); };
+
+                UIElements.alert.confirmBtn.addEventListener('click', confirmHandler, { once: true });
+                UIElements.alert.cancelBtn.addEventListener('click', cancelHandler, { once: true });
+
+                UIElements.alert.overlay.classList.add('show');
+            });
+        }
+
+        // --- INITIALIZE APP ---
+        init();
+    });
+    </script>
+</body>
+</html>

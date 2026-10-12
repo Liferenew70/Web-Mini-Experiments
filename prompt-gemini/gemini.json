@@ -1,0 +1,348 @@
+[
+  {
+    "name": "Gemini",
+    "icon": "fas fa-paint-brush",
+    "prompts": [
+      {
+        "title": "Éditorial Streetwear Violet",
+        "prompt": "{\"prompt\": \"Hyperrealistic, cinematic editorial photo of the person from the reference image. The subject is seated on a dark purple beanbag chair, wearing a bold, oversized, purple-themed urban outfit: a long coat, white wide-leg pants, chunky sneakers, and a silver watch. The background is a solid, uniform purple. A clear reflection of the subject is visible in a thin layer of water on the floor. The scene is lit with dramatic studio lighting, creating a high-fashion campaign aesthetic.\"}"
+      },
+      {
+        "title": "Portrait Culturel Akan",
+        "prompt": "{\"prompt\": \"A high-quality, professional studio photograph of the person from the reference photo, maintaining their exact facial features. The subject is seated with dignity on an authentic Akan wooden stool. They are dressed in an elegant, traditional Akan outfit made of rich, colorful, and intricately textured Kente cloth, adorned with appropriate cultural accessories. The background is a seamless, modern studio backdrop. The lighting is professional and balanced, highlighting the textures of the fabric and the pride of the subject's calm and confident pose.\"}"
+      },
+      {
+        "title": "Rencontre VIP avec Cristiano Ronaldo",
+        "prompt": "{\"prompt\": \"Maintain the exact face and identity from the reference photo without any alteration. Create a photorealistic image of this person dressed in a sleek, well-fitted blue blazer and polished black dress shoes. They are posed standing next to a realistically rendered Cristiano Ronaldo, who is also dressed in an elegant suit jacket. The background is a prestigious VIP event setting, like a red carpet backdrop or a gala wall with professional, soft lighting. The final image must be sharp, well-lit, and emulate an official celebrity photoshoot.\"}"
+      },
+      {
+        "title": "Portrait Studio Contraste Rouge",
+        "prompt": "{\"prompt\": \"A modern, bold studio portrait. The person from the reference image poses against a deep black backdrop under dramatic studio lighting. A soft red key light illuminates one side of their face and arm, creating a striking contrast with the deep shadows. The subject wears a fitted black long-sleeve shirt and a dark wristwatch, with their head turned slightly to the side, conveying confidence. The overall feel is modern and powerful, focusing on light and form.\"}"
+      },
+      {
+        "title": "Solitude Urbaine sous la Pluie",
+        "prompt": "{\"prompt\": \"A cinematic, atmospheric shot of the person from the reference photo, standing still on a city sidewalk at night during a heavy downpour. They are wearing an oversized black t-shirt, baggy pants, and sneakers, holding an umbrella. The scene is characterized by dramatic, moody lighting, a shallow depth of field, and vibrant reflections on the wet ground from city lights and a soft backlight halo. The image should look like a film still, with slightly desaturated colors, emphasizing a feeling of quiet solitude.\"}"
+      },
+      {
+        "title": "Figurine de Collection sur un Bureau",
+        "prompt": "{\"prompt\": \"Create a hyperrealistic 1/7 scale collectible figurine of the person from the reference image, placed on a computer desk in an unreal engine environment. The figurine stands on a clear, round acrylic base with no text. On the computer monitor in the background, the Zbrush modeling process of this exact figurine is displayed. Next to the monitor is a BANDAI-style toy packaging box, featuring 2D art of the character.\"}"
+      },
+      {
+        "title": "Éditorial de Mode Bleu Ciel",
+        "prompt": "{\"prompt\": \"A futuristic fashion editorial photo. The person from the reference image (maintaining the same face and hairstyle) is elegantly seated in a relaxed posture. They are wearing an oversized white sweatshirt, cloud-blue oversized cargo pants, and neutral-colored chunky sneakers (like Nikes) with white ribbed socks and a matching cap. The environment is a studio with a muted, sky-blue background. The lighting is a soft, cinematic glow that beautifully highlights skin texture and fabric details.\"}"
+      },
+      {
+        "title": "Reflet dans une Salle de Bain de Luxe",
+        "prompt": "{\"prompt\": \"A cinematic shot of the person from the uploaded photo, maintaining their exact features, including a sharp jawline and well-groomed facial hair if present. Their wavy brown hair is styled, with some strands partially covering their face. They are wearing a thick, shiny brown fur jacket and a black Apple Watch. The subject is looking at their own reflection in a luxurious bathroom mirror, leaning with both hands on the wash basin. Their face is slightly wet with realistic water droplets. The background is a high-end bathroom with warm, golden ambient lighting.\"}"
+      },
+      {
+        "title": "Glamour au Sol avec Spotlight",
+        "prompt": "{\"prompt\": \"Without altering the physical features of the reference person, create an elegant, high-fashion photo. The subject is posing gracefully while lying on the floor of a minimalist studio. The scene is illuminated by a single, focused circle of light, like a spotlight, against a neutral background. The subject wears a white satin shirt and a striking gold necklace, and is barefoot. The pose is sophisticated and artistic. A glass of red wine is placed nearby, enhancing the atmosphere of luxury and glamour.\"}"
+      },
+      {
+        "title": "Footballeur Professionnel dans le Vestiaire",
+        "prompt": "{\"prompt\": \"Transform the person in the photo into a professional football player, sitting confidently in a spectacular, modern locker room. They are wearing a full white Real Madrid kit (jersey, shorts, socks, boots). On their lap, they hold a Champions League football. In the background, a jersey with the number 7 and the name 'Mr_Diarra' is hanging. The lighting is dramatic and cinematic, and the image is ultra-detailed and photorealistic.\"}"
+      },
+      {
+        "title": "Portrait Néon dans le Miroir",
+        "prompt": "{\"prompt\": \"An 8K hyper-realistic, editorial-style portrait of the person from the reference photo. They are posing in front of an oval vintage mirror with a golden frame. Their makeup is dramatic (e.g., winged eyeliner and glossy lips). One hand is raised, gently touching their lips or chin in a sensual gesture. The entire scene is illuminated by a vibrant pink neon light, which reflects in the mirror and creates a mysterious, fantasy-like atmosphere. The style should be high-fashion, moody, and artistic, with sharp details and high contrast.\"}"
+      },
+      {
+        "title": "Style Avant-Gardiste en Noir",
+        "prompt": "{\"prompt\": \"A photo of the person from the reference image seated in a photography studio, with lighting that mimics the warm glow of dusk. The subject wears an all-black, avant-garde outfit: an oversized t-shirt, oversized black pants, and black boots. They wear a silver watch and other silver accessories. Posed from a side angle, they are holding a takeaway coffee cup. The overall style is elegant and mysterious.\"}"
+      },
+      {
+        "title": "Éditorial de Rue à Times Square",
+        "prompt": "{\"prompt\": \"A cinematic, ultra-realistic night street photo set in Times Square, New York, illuminated by glowing neon billboards. A stylish individual, with a face and identity 100% identical to the reference photo, leans casually against a striking red Ferrari Daytona SP3. Their outfit consists of an oversized white hoodie, a black denim jacket, baggy denim jeans, clean white sneakers, and sleek black sunglasses. The shot has cinematic lighting, crisp shadows, and neon reflections, creating an editorial-quality photograph that merges high-fashion urban style with New York's electric atmosphere.\"}"
+      },
+      {
+        "title": "Portrait Studio Minimaliste",
+        "prompt": "{\"prompt\": \"A cinematic 4K studio portrait of the person from the reference image. The subject sits casually on a stool in a professional photography studio, surrounded by visible softbox and spotlight equipment. They are wearing modern, casual clothing and have a relaxed, confident pose. The background is a minimalistic grey, enhanced by dramatic studio lighting that creates soft shadows and a stylish, editorial atmosphere. The portrait is ultra-detailed and sharp.\"}"
+      },
+      {
+        "title": "Portrait Cinématographique Rouge Intense",
+        "prompt": "{\"prompt\": \"A vertical portrait (1080x1920 format) with stark cinematic lighting and intense contrast. The subject from the reference image is shot from a slightly low, upward-facing angle. The background is a deep, saturated crimson red. The lighting is highly directional, casting warm golden highlights on one side of the face while plunging the other into deep shadow, emphasizing bone structure. The subject wears a heavy, textured overcoat. The final image should have a realistic, high-fashion feel, created purely through light, shadow, color, and posture.\"}"
+      },
+      {
+        "title": "Le Chevalier Gardien",
+        "prompt": "{\"prompt\": \"Cinematic portrait of the person from the reference image, reimagined as a noble knight. They are adorned in intricately detailed, battle-worn steel armor with gold engravings. The subject stands in a grand, medieval throne room, with dramatic 'god rays' of sunlight streaming through a high stained-glass window, illuminating dust particles in the air. The mood is solemn, powerful, and timeless. The image is hyper-realistic with a focus on metallic textures and atmospheric lighting.\"}"
+      },
+      {
+        "title": "Mercenaire Cyberpunk",
+        "prompt": "{\"prompt\": \"A dynamic, full-body shot of the person from the reference photo as a cyberpunk mercenary on a rain-slicked street in a futuristic metropolis like Neo-Tokyo. Massive holographic advertisements and neon signs cast vibrant blue, pink, and yellow light across the scene. The subject wears a high-tech trench coat with illuminated circuits and augmented reality glasses. The style is hyper-detailed, cinematic, and filled with realistic reflections and anamorphic lens flares.\"}"
+      },
+      {
+        "title": "Sérénité Abyssale",
+        "prompt": "{\"prompt\": \"An ethereal, hyper-realistic underwater portrait. The person from the reference photo floats weightlessly in crystal-clear turquoise water. Beams of sunlight penetrate the surface, creating dancing caustic light patterns on their skin and flowing, translucent fabric. Schools of tiny, colorful fish swim around them, with a vibrant coral reef in the background. The atmosphere is serene, magical, and breathtaking.\"}"
+      },
+      {
+        "title": "L'Alchimiste Cosmique",
+        "prompt": "{\"prompt\": \"The person from the reference photo portrayed as a cosmic alchemist in a celestial observatory. They are surrounded by glowing orbs, ancient books, and swirling nebulae contained within glass instruments. Their hands emit a soft, magical glow as they manipulate stardust. The lighting is mystical, combining the warm flicker of candlelight with the cool, ethereal light of the cosmos. The image is rich in detail, with a fantasy art style.\"}"
+      },
+      {
+        "title": "Double Exposition Forestière",
+        "prompt": "{\"prompt\": \"An artistic, double exposure portrait. Create a silhouette of the person from the reference photo, which is then intricately filled with a misty, old-growth pine forest scene. The trunks of the trees should align with the contours of their face and body, creating a seamless and surreal blend of human and nature. The color palette is muted and atmospheric, with soft greens, deep shadows, and a touch of fog.\"}"
+      },
+      {
+        "title": "Le Détective Film Noir",
+        "prompt": "{\"prompt\": \"A classic black and white 'film noir' style portrait. The person from the reference photo is a detective in their dimly lit office in the 1940s. Light from a window with blinds casts dramatic, sharp shadows across their face and the room. Smoke from a cigarette or a cup of coffee curls in the air. The mood is mysterious, contemplative, and intensely atmospheric. Focus on high contrast and grainy film texture.\"}"
+      },
+      {
+        "title": "Souverain Égyptien Antique",
+        "prompt": "{\"prompt\": \"A majestic and powerful portrait of the person from the reference image as an ancient Egyptian pharaoh or queen. They are seated on an ornate golden throne, adorned with a traditional headdress (like a Nemes), intricate jewelry, and fine linen clothing. The background features hieroglyph-covered stone walls, lit by flickering torches. The image should be ultra-realistic, with a focus on gold textures, skin tones, and historical detail.\"}"
+      },
+      {
+        "title": "L'Explorateur Post-Apocalyptique",
+        "prompt": "{\"prompt\": \"The person from the photo is a lone survivor in a post-apocalyptic, overgrown city. They wear practical, weathered clothing and carry survival gear. They are looking out over the ruins of the city from a high vantage point as the sun sets, casting long shadows and a warm, orange glow. The atmosphere is a mix of desolation and resilient hope. The style is cinematic and highly detailed, inspired by games like 'The Last of Us'.\"}"
+      },
+      {
+        "title": "Portrait en Porcelaine Éclatée",
+        "prompt": "{\"prompt\": \"A surreal, high-fashion concept portrait where the person's skin appears to be made of cracked white porcelain, like an antique doll or statue. Delicate golden lines fill the cracks (a Kintsugi effect). One or two beautiful, vibrant flowers grow from the fissures. The background is a simple, dark, and soft-focused texture. The lighting is soft and directional, emphasizing the unique texture of the 'skin'.\"}"
+      },
+      {
+        "title": "Le Nomade du Désert",
+        "prompt": "{\"prompt\": \"A dramatic, wide-shot portrait of the person as a desert nomad, standing atop a massive sand dune at sunset. The wind whips their layered robes and scarf around them. The sky is a fiery gradient of orange, purple, and red. The low sun creates a strong silhouette and highlights the texture of the sand. The feeling is one of freedom, solitude, and immense scale.\"}"
+      },
+      {
+        "title": "Artiste dans son Atelier Lumineux",
+        "prompt": "{\"prompt\": \"A warm and candid portrait of the person from the photo as an artist in a sun-drenched, bohemian-style studio. They are wearing casual clothes splattered with paint, holding a brush or a pencil. The background is filled with canvases, sculptures, and art supplies. Sunlight streams through a large industrial window, creating a soft, hazy light. The photo should feel authentic, creative, and inspiring.\"}"
+      },
+      {
+        "title": "Bal Masqué Vénitien",
+        "prompt": "{\"prompt\": \"An opulent and mysterious portrait set during a Venetian masquerade ball. The person wears an elaborate, period-appropriate gown or suit and holds a beautifully crafted, ornate mask that partially conceals their face. The setting is a grand ballroom with chandeliers, frescoes, and other guests in the blurred background. The lighting is warm and dramatic, capturing the luxury and intrigue of the event.\"}"
+      },
+      {
+        "title": "Astronaute en apesanteur",
+        "prompt": "{\"prompt\": \"An ultra-realistic image of the person from the reference photo as an astronaut floating in zero gravity inside a futuristic spacecraft. The Earth is visible through a large viewport window behind them, casting a soft blue light onto their face and suit. Tiny droplets of water float motionlessly in the air around them. The image should be technically precise, with a focus on the details of the helmet, suit, and reflections in the visor.\"}"
+      },
+      {
+        "title": "Guerrier Viking dans la Brume",
+        "prompt": "{\"prompt\": \"A powerful and raw portrait of the person as a Viking warrior. They have braided hair, perhaps some tasteful runic face paint, and are dressed in leather and fur armor. They stand on a misty, rocky shoreline with a fjord and mountains in the background. The lighting is overcast and moody, and the air is thick with fog. The style is gritty, realistic, and epic.\"}"
+      },
+      {
+        "title": "Portrait en Éclats de Verre",
+        "prompt": "{\"prompt\": \"A highly conceptual and abstract portrait. The person's image appears as if viewed through a shattered pane of glass. Each shard reflects a slightly different angle or expression of their face. The background is dark and minimal to emphasize the effect. The lighting should create sharp, specular highlights on the edges of the glass shards. The mood is complex, fragmented, and visually arresting.\"}"
+      },
+      {
+        "title": "Pilote de Chasse Rétro",
+        "prompt": "{\"prompt\": \"A cool, retro-style photograph of the person as a fighter pilot from the 1970s. They are wearing a flight suit, helmet under their arm, and aviator sunglasses. They lean confidently against a vintage jet fighter on an airfield tarmac during the 'golden hour'. The photo has a warm, faded color grading and a slight film grain, giving it an authentic, nostalgic feel.\"}"
+      },
+      {
+        "title": "Gardien de la Forêt Bioluminescente",
+        "prompt": "{\"prompt\": \"A magical, fantasy-themed portrait. The person is a guardian or spirit in an enchanted forest at night. The environment is alive with bioluminescent plants, glowing mushrooms, and floating light particles, casting a magical blue and green glow on the subject. They are dressed in ethereal, nature-inspired clothing. The atmosphere is wondrous, serene, and otherworldly.\"}"
+      },
+      {
+        "title": "Chef Cuisinier en Pleine Action",
+        "prompt": "{\"prompt\": \"A dynamic, editorial-style photo of the person as a high-end chef in a professional kitchen. They are intensely focused, artfully plating a dish with tweezers or saucing a plate. Steam rises in the background from hot pans. The lighting is clean and dramatic, highlighting the food, their focused expression, and the stainless steel environment. The image should convey passion, precision, and culinary artistry.\"}"
+      },
+      {
+        "title": "Le Soliste de Jazz",
+        "prompt": "{\"prompt\": \"An atmospheric, moody portrait of the person as a jazz musician on stage in a dimly lit club. They are passionately playing an instrument (like a saxophone, piano, or singing into a vintage microphone). A single, warm spotlight illuminates them, creating deep shadows in the background where the faint outlines of an audience can be seen. The image should capture the emotion and soul of the music.\"}"
+      },
+      {
+        "title": "La Constellation Humaine",
+        "prompt": "{\"prompt\": \"A surreal and beautiful portrait where the person's freckles, moles, or key facial points are replaced by tiny, brightly glowing stars. These stars are connected by faint, luminous lines, forming celestial constellations across their skin. The background is the deep, dark purple and blue of a nebula-filled night sky. The image is both intimate and cosmic.\"}"
+      },
+      {
+        "title": "Le Maître du Jardin Zen",
+        "prompt": "{\"prompt\": \"A peaceful and minimalist portrait. The person is depicted in a traditional Japanese Zen garden. They are dressed in simple, elegant robes (like a samue or kimono) and are carefully raking patterns into the white gravel, or meditating near a koi pond. The environment is serene, with sculpted bonsai trees, mossy stones, and a bamboo water feature. The lighting is soft and natural.\"}"
+      },
+      {
+        "title": "Le Héros de Western",
+        "prompt": "{\"prompt\": \"A classic cinematic western portrait. The person from the photo is a rugged cowboy or gunslinger, standing on the dusty main street of an old west town. They wear a weathered duster coat, a cowboy hat shadowing their eyes, and a hand resting near their holster. The harsh midday sun creates high contrast and sharp shadows. The style is inspired by classic Sergio Leone films.\"}"
+      },
+      {
+        "title": "La Statue Vivante de Marbre",
+        "prompt": "{\"prompt\": \"A high-fashion, statuesque portrait where the person's body appears to be sculpted from pure white marble, mimicking classical Greek or Roman sculpture. They hold a dynamic, frozen pose. The lighting is simple and directional, like in a museum, designed to carve out the contours of their form and emphasize the smooth, hard texture of the marble. The background is a solid, deep grey.\"}"
+      },
+      {
+        "title": "Aventure au Sommet de la Montagne",
+        "prompt": "{\"prompt\": \"An awe-inspiring photo of the person as a mountain climber having just reached the summit of a snow-capped peak. They are in full climbing gear, leaning on an ice axe, breathing in the cold air. The panoramic view behind them shows a sea of clouds and other mountain peaks below. The morning sun is just cresting the horizon, creating a spectacular lens flare. The feeling is one of triumph and breathtaking beauty.\"}"
+      },
+      {
+        "title": "Le Gardien de la Bibliothèque Oubliée",
+        "prompt": "{\"prompt\": \"An atmospheric portrait of the person as a scholar or guardian in a vast, ancient, and dusty library. Sunlight streams through a large, arched window, illuminating floating dust motes and rows of old, leather-bound books that stretch up into the shadows. The subject is reading a heavy tome or looking thoughtfully into the distance. The mood is quiet, magical, and full of hidden knowledge.\"}"
+      },
+      {
+        "title": "Le Capitaine Pirate Légendaire",
+        "prompt": "{\"prompt\": \"A cinematic portrait of the person from the reference image, reimagined as a legendary pirate captain on the deck of their galleon during a stormy sea. They wear a weathered leather tricorne hat, a dramatic long coat, and hold an antique spyglass, looking defiantly towards the horizon. Dramatic, low-key lighting from a swinging lantern, with sea spray catching the light. Hyper-realistic, detailed textures, and a powerful, adventurous mood.\"}"
+      },
+      {
+        "title": "L'Architecte de Rêves VR",
+        "prompt": "{\"prompt\": \"A futuristic portrait of the person as a virtual reality architect. They are surrounded by floating, translucent holographic interfaces and 3D architectural models that they manipulate with glowing data-gloves. The environment is a sleek, minimalist space, and the lighting is generated entirely by the holographic elements, casting a vibrant, multi-colored glow on the subject. The style is clean, high-tech, and imaginative.\"}"
+      },
+      {
+        "title": "Le Forgeron Nain",
+        "prompt": "{\"prompt\": \"A fantasy portrait of the person from the photo as a master dwarven blacksmith in their forge. They are powerfully built, wearing a leather apron over sturdy clothes, and holding a glowing, hot piece of metal with tongs. The background is filled with the tools of the trade, and the intense light from the forge fire illuminates their face, highlighting sweat and determination. The style is gritty, realistic fantasy, with a focus on fire, metal, and stone textures.\"}"
+      },
+      {
+        "title": "Le Sénateur Romain",
+        "prompt": "{\"prompt\": \"A classical, painterly portrait of the person from the reference image as a wise Roman senator. They are dressed in an elegant, flowing toga, reclining on a chaise lounge in a sunlit villa with marble columns and mosaic floors. They hold a scroll and have a thoughtful, commanding expression. The lighting should mimic the soft, directional light of Renaissance paintings, creating a timeless and dignified atmosphere.\"}"
+      },
+      {
+        "title": "Portrait en Peinture Corporelle Galactique",
+        "prompt": "{\"prompt\": \"A stunning, artistic studio portrait where the person's upper body is covered in hyper-realistic body paint, depicting a swirling nebula and distant galaxies. Tiny, sparkling glitter pieces mimic stars. The background is a simple, deep black to make the 'cosmic skin' the central focus. Lighting is soft and multi-directional to catch the glitter and highlight the contours of the body paint.\"}"
+      },
+      {
+        "title": "Le Moine du Monastère Montagnard",
+        "prompt": "{\"prompt\": \"A serene and atmospheric portrait of the person as a monk in a remote mountain monastery, possibly in the Himalayas. They are dressed in simple, traditional robes and are meditating or looking out at a breathtaking mountain vista from a stone balcony. The air is crisp and clear, with soft morning light illuminating the scene. The mood is one of profound peace, tranquility, and spiritualism.\"}"
+      },
+      {
+        "title": "Le Danseur de Ballet Puissant",
+        "prompt": "{\"prompt\": \"A dynamic, high-speed photograph capturing the person from the reference photo as a ballet dancer in a powerful, athletic pose mid-air. They are in a minimalist dance studio with a dark floor and background. A fine white powder (like flour or chalk) is thrown into the air, and its particles are frozen in motion around the dancer by the sharp, dramatic lighting, emphasizing their form and energy. The style is elegant, modern, and highly impactful.\"}"
+      },
+      {
+        "title": "Le Samouraï sous les Cerisiers",
+        "prompt": "{\"prompt\": \"A beautiful and cinematic portrait of the person as a samurai warrior during the spring. They are in full, ornate armor but without a helmet, standing calmly under a blossoming cherry blossom tree. Pink petals are gently falling around them. The lighting is soft and diffused, as if on a slightly overcast day, creating a poignant contrast between the warrior's deadly purpose and the delicate beauty of nature.\"}"
+      },
+      {
+        "title": "Le personnage en papier découpé",
+        "prompt": "{\"prompt\": \"A unique, stylized portrait where the person and their immediate surroundings appear to be crafted from multiple layers of colored paper, creating a 3D papercraft or 'diorama' effect. The shapes are artistic and simplified, but the person's face remains recognizable. The lighting should be soft and directional to create gentle shadows that emphasize the depth and layered texture of the paper art.\"}"
+      },
+      {
+        "title": "L'Inventeur de la Renaissance",
+        "prompt": "{\"prompt\": \"An intellectual and cluttered portrait of the person as a Renaissance inventor in their workshop, inspired by Leonardo da Vinci. They are surrounded by sketches, anatomical drawings, wooden models of flying machines, and various scientific instruments. They are captured in a moment of discovery, looking up from their work with an intense gaze. The lighting is warm and comes from a single source, like a candle or a window, in the style of chiaroscuro.\"}"
+      },
+      {
+        "title": "L'Archéologue dans la Tombe",
+        "prompt": "{\"prompt\": \"An adventurous, 'Indiana Jones' style portrait. The person from the photo is an archaeologist who has just discovered a hidden chamber in an ancient tomb. They are holding a torch or lantern, which is the primary light source, casting a warm, flickering glow on their excited face and the mysterious artifacts and hieroglyphs around them. The atmosphere is thick with dust, mystery, and the thrill of discovery.\"}"
+      },
+      {
+        "title": "Le personnage d'un vitrail",
+        "prompt": "{\"prompt\": \"An artistic and vibrant portrait where the person is rendered in the style of a medieval stained-glass window. Their form is composed of stylized, richly colored pieces of glass, outlined with thick, dark lines. The image should appear to be backlit, with bright, divine light shining through the 'glass' to create a luminous and sacred effect. The person's face should be recognizable but stylized to fit the art form.\"}"
+      },
+      {
+        "title": "Le Maître du Thé Japonais",
+        "prompt": "{\"prompt\": \"A portrait of profound stillness and grace. The person from the reference photo is performing a traditional Japanese tea ceremony in a minimalist, tatami-matted room. They are wearing an elegant kimono and are focused on the precise, meditative movements of the ritual. The lighting is soft and natural, coming from a shoji screen window, creating a peaceful and highly aesthetic composition.\"}"
+      },
+      {
+        "title": "Le Pilote de Course Rétro",
+        "prompt": "{\"prompt\": \"A gritty and cool portrait of the person as a Formula 1 driver from the 1960s. They are sitting in the cockpit of a vintage race car, wearing a classic helmet and goggles, with a focused and determined look. The photo should have a desaturated, slightly grainy film look, capturing the raw danger and glamour of old-school motorsport. The background is the blurred motion of the racetrack.\"}"
+      },
+      {
+        "title": "Le Chef d'Orchestre",
+        "prompt": "{\"prompt\": \"A dramatic and passionate portrait of the person as an orchestra conductor in the middle of a performance. They are on the podium, back to the camera but with their face turned slightly to the side, captured in a moment of intense emotion and movement. Their arms are in motion, directing the unseen orchestra. The lighting is theatrical, with a strong spotlight from above, and the background is the dark, out-of-focus concert hall.\"}"
+      },
+      {
+        "title": "Le personnage en métal liquide",
+        "prompt": "{\"prompt\": \"A stunning, surreal sci-fi portrait. The person from the photo appears to be made of or covered in reflective, chrome-like liquid metal, similar to a T-1000. Their form is fluid and dynamic, with ripples and drips frozen in time. The background is a simple, dark industrial setting, allowing the reflections of the environment on their metallic skin to define their shape. Hyper-realistic, with a focus on reflections and fluid dynamics.\"}"
+      },
+      {
+        "title": "Le Gardien de Phare",
+        "prompt": "{\"prompt\": \"A rugged and solitary portrait of the person as a lighthouse keeper. They are standing at the top of a lighthouse, next to the giant lens, looking out at a stormy sea. The powerful beam of the lighthouse sweeps across the scene, periodically illuminating their weathered face. The mood is one of stoic resilience and vigilance against the elements. The style is cinematic and atmospheric.\"}"
+      },
+      {
+        "title": "Le Danseur de Carnaval de Rio",
+        "prompt": "{\"prompt\": \"A vibrant, energetic, and joyful portrait of the person from the photo as a samba dancer during the Rio Carnival. They are wearing a spectacular, brightly colored costume adorned with feathers, beads, and sequins. The background is a blur of ecstatic crowds and parade floats. The image should capture a moment of peak motion and celebration, with dynamic lighting and a riot of color.\"}"
+      },
+      {
+        "title": "Le Voyageur Temporel Victorien",
+        "prompt": "{\"prompt\": \"A steampunk-inspired portrait of the person as a time traveler who has just arrived in Victorian London. They wear an eclectic mix of futuristic gadgets and period clothing. They stand in a foggy, gaslit alleyway, looking around with a mix of curiosity and caution. The image combines historical detail with imaginative technology, lit by the warm glow of gas lamps and the cool light of their temporal device.\"}"
+      },
+      {
+        "title": "Le Roi ou la Reine des Fées",
+        "prompt": "{\"prompt\": \"An ethereal and magical fantasy portrait. The person is depicted as a monarch of the Fae, with subtly pointed ears and iridescent, dragonfly-like wings. They are seated on a throne made of intertwined, living wood and flowers in a twilight forest clearing. The air is filled with glowing fireflies. The lighting is magical and soft, with a dreamlike, enchanting quality.\"}"
+      },
+      {
+        "title": "Le Survivant d'un Hiver Nucléaire",
+        "prompt": "{\"prompt\": \"A stark and moody portrait of the person as a survivor in a nuclear winter. They are heavily bundled in ragged, makeshift warm clothing, with goggles to protect their eyes. They trudge through a desolate, snow-covered urban landscape under a perpetually grey, sunless sky. Their breath fogs in the frigid air. The atmosphere is one of grim survival and utter desolation, with a highly cinematic and bleak color palette.\"}"
+      },
+      {
+        "title": "L'Androïde Philosophe",
+        "prompt": "{\"prompt\": \"A clean, thought-provoking sci-fi portrait. The person from the reference photo is an advanced android, with parts of their face or body showing the synthetic skin peeling back to reveal intricate micro-circuitry beneath. They are in a minimalist, white room, looking thoughtfully at a single, simple object (like a flower or a chess piece). The lighting is clinical and soft. The image explores themes of consciousness and humanity.\"}"
+      },
+      {
+        "title": "Le Champion de Jeux Vidéo",
+        "prompt": "{\"prompt\": \"A dynamic and intense portrait of the person as a professional esports champion. They are sitting in a gaming chair in a stadium arena, in front of a glowing keyboard and monitor. The reflection of the game is visible in their focused eyes and glasses. The background is filled with the roar of the crowd and giant screens. The lighting is electric blue and magenta, capturing the high-stakes energy of a championship final.\"}"
+      },
+      {
+        "title": "Portrait Dissous en Vol d'Oiseaux",
+        "prompt": "{\"prompt\": \"A surreal and artistic portrait where one side of the person's body seems to be dissolving into a flock of birds taking flight. The transition from solid form to individual birds should be seamless and beautiful. The background is a simple, dramatic sky at sunset. The image is metaphorical, suggesting freedom, loss, or transformation. The style is painterly and highly conceptual.\"}"
+      },
+      {
+        "title": "Le Biologiste des Profondeurs",
+        "prompt": "{\"prompt\": \"An atmospheric underwater portrait. The person is a deep-sea biologist inside a submersible, looking out of a circular porthole with wonder. Their face is illuminated only by the soft glow of the dashboard and the strange, bioluminescent creatures visible in the crushing darkness outside. The mood is one of awe, discovery, and isolation in an alien world.\"}"
+      },
+      {
+        "title": "Le Musicien de Rue Passionné",
+        "prompt": "{\"prompt\": \"A candid and authentic street photography portrait. The person is a street musician, passionately playing their instrument (guitar, violin, etc.) on a bustling city corner. People are blurred in the background, but the subject is in sharp focus, capturing the raw emotion on their face. The lighting is natural, using the late afternoon sun to create interesting shadows. The style is realistic, emotional, and documentary-like.\"}"
+      },
+      {
+        "title": "L'Apiculteur Mystique",
+        "prompt": "{\"prompt\": \"A surreal and golden-hued portrait of the person as a beekeeper. They are wearing a protective suit, but the veil is lifted, and instead of a swarm, a cloud of bees gently and magically forms a crown or a beard around their calm face. The scene is set in a sun-drenched meadow, with honeycomb patterns subtly overlaid on the image. The lighting is warm, golden, and dreamlike.\"}"
+      },
+      {
+        "title": "Le Topographe sur Mars",
+        "prompt": "{\"prompt\": \"A realistic sci-fi portrait of the person as a Martian colonist and topographer. They are in a futuristic, lightweight spacesuit, standing on a ridge overlooking a vast, ochre-colored Martian canyon. They hold a holographic mapping device that projects a grid over the landscape. The thin Martian atmosphere creates a pinkish sky with a tiny, distant sun. The image is awe-inspiring, emphasizing the scale and loneliness of exploration.\"}"
+      },
+      {
+        "title": "Le Maître Horloger",
+        "prompt": "{\"prompt\": \"A macro-inspired, detailed portrait of the person as a master watchmaker. They are hunched over a workbench, using a jeweler's loupe to meticulously assemble the intricate gears and springs of a luxury watch. The focus is tight on their face and hands, with the complex watch movement highly detailed in the foreground. The lighting is precise and focused, creating a mood of intense concentration and craftsmanship.\"}"
+      },
+      {
+        "title": "L'Artiste de Graffiti Urbain",
+        "prompt": "{\"prompt\": \"A dynamic and vibrant environmental portrait. The person from the photo is a graffiti artist, captured in the act of creating a large, colorful mural on a brick wall in an urban alleyway. They are wearing streetwear and a respirator mask, holding a spray can. The air is slightly hazy with paint mist. The image is energetic, creative, and deeply rooted in contemporary urban culture.\"}"
+      },
+      {
+        "title": "Le Druide Ancien",
+        "prompt": "{\"prompt\": \"A mystical and ancient portrait of the person as a Celtic druid in a sacred, moss-covered stone circle. They wear robes adorned with natural elements and hold a gnarled wooden staff. The lighting is foggy and ethereal, as if at dawn, with beams of light piercing through the mist. The mood is wise, mysterious, and deeply connected to nature.\"}"
+      },
+      {
+        "title": "Le Marchand d'Épices Exotiques",
+        "prompt": "{\"prompt\": \"A vibrant and sensory-rich portrait of the person in a bustling, old-world spice market. They are surrounded by colorful mounds of spices—turmeric, paprika, saffron—in large sacks and bowls. They are holding a handful of a fragrant spice, examining it with a knowledgeable eye. The lighting is warm and comes through a latticed window, illuminating the rich colors and textures. The image feels warm, aromatic, and full of life.\"}"
+      },
+      {
+        "title": "Le Plongeur de Falaise",
+        "prompt": "{\"prompt\": \"A breathtaking, action-stopped photo of the person as a cliff diver. They are captured mid-air, in a perfect, swan-like dive, high above a stunningly blue tropical ocean cove. The sun is bright, making the water sparkle. The image should convey a sense of ultimate freedom, adrenaline, and grace, with a sharp focus on the diver against the beautiful, slightly blurred natural background.\"}"
+      },
+      {
+        "title": "Le Poète de la Beat Generation",
+        "prompt": "{\"prompt\": \"A black and white, character-driven portrait of the person as a Beat Generation poet in a smoky 1950s coffeehouse. They are wearing a turtleneck sweater and are passionately reciting poetry to an unseen audience, captured mid-gesture. The atmosphere is intimate, intellectual, and counter-cultural. The photo has high contrast and a rich, grainy texture, reminiscent of classic photography from the era.\"}"
+      },
+      {
+        "title": "Le Gardien de la Serre Botanique",
+        "prompt": "{\"prompt\": \"A lush and verdant portrait. The person is a botanist or caretaker in a massive, Victorian-style glass greenhouse filled with exotic and rare plants. They are gently tending to a unique flower or leaf. Beams of sunlight filter through the glass ceiling, creating a humid, bright, and serene atmosphere. The image is a celebration of nature's beauty and human care.\"}"
+      },
+      {
+        "title": "Le Héros de l'Âge d'Or des Comics",
+        "prompt": "{\"prompt\": \"A stylized portrait of the person reimagined as a superhero, rendered in the classic comic book style of the 1940s-50s. The image should use bold lines, a limited color palette, and Ben-Day dot patterns for shading. The character is in a dynamic, heroic pose against a simple, explosive background with a dramatic caption box. The style is nostalgic, powerful, and highly stylized.\"}"
+      },
+      {
+        "title": "Le DJ dans un Club Underground",
+        "prompt": "{\"prompt\": \"An energetic and atmospheric portrait of the person as a DJ performing a set in a dark, underground club. They are surrounded by turntables and equipment, intensely focused on their mix. Strobing lights and laser beams cut through the darkness and smoke, creating a dynamic and immersive environment. The mood is electric, rhythmic, and cool.\"}"
+      },
+      {
+        "title": "Le Shérif Solitaire",
+        "prompt": "{\"prompt\": \"A cinematic western portrait. The person from the photo is a lone sheriff, standing in the doorway of their office, silhouetted against the bright, dusty street of a frontier town. They are holding a cup of coffee, looking out with a weary but resolute expression. The lighting uses the harsh contrast between the dark interior and the bright exterior to create a powerful, story-rich image.\"}"
+      },
+      {
+        "title": "Le Cartographe Céleste",
+        "prompt": "{\"prompt\": \"A fantastical portrait of the person as a celestial cartographer. They are in a room where the ceiling is a living map of the night sky, with constellations moving and shifting. They are using an ancient, ornate astrolabe to chart the stars, and the starlight itself casts a magical, silvery glow upon them. The mood is one of wonder, precision, and cosmic connection.\"}"
+      },
+      {
+        "title": "Le Pêcheur au Filet",
+        "prompt": "{\"prompt\": \"A powerful, documentary-style portrait of the person as a traditional fisherman. They are standing in shallow water at sunrise, casting a large, circular net in a beautiful, expansive motion. The rising sun backlights them, creating a strong silhouette and making the water droplets on the net sparkle like diamonds. The image is a tribute to hard work, tradition, and the beauty of a simple moment.\"}"
+      },
+      {
+        "title": "Le Fauconnier Royal",
+        "prompt": "{\"prompt\": \"A majestic portrait of the person as a royal falconer in a medieval court. They are dressed in fine, period-appropriate attire and have a large, beautiful falcon perched on their gloved hand. They are standing in the courtyard of a castle, with stone walls and banners in the background. The lighting is crisp and clear, like a bright autumn morning, highlighting the details of the bird's feathers and the subject's noble bearing.\"}"
+      },
+      {
+        "title": "Portrait dans un Champ de Tournesols",
+        "prompt": "{\"prompt\": \"A joyful and radiant portrait. The person from the photo is standing in the middle of a vast field of sunflowers, all turned towards the golden hour sun. They have a happy, serene expression. The lighting is warm, golden, and slightly hazy, creating a dreamy and overwhelmingly positive atmosphere. The image is a pure celebration of summer and happiness.\"}"
+      },
+      {
+        "title": "Le Verrier en Plein Travail",
+        "prompt": "{\"prompt\": \"A dramatic and fiery portrait of the person as a glassblower. They are at the end of a blowpipe, expertly shaping a piece of glowing, molten glass. The intense heat and light from the furnace and the glass itself is the main light source, illuminating their focused face and the surrounding dark workshop. The image captures a moment of intense creativity, skill, and danger.\"}"
+      },
+      {
+        "title": "Le Joueur d'Échecs Stratégique",
+        "prompt": "{\"prompt\": \"An intense, intellectual portrait of the person as a chess grandmaster in the middle of a championship match. They are leaning over a wooden chessboard, hand hovering over a piece, with deep concentration etched on their face. The lighting is focused and dramatic, like a spotlight on the board and player, with the opponent and audience blurred into the dark background. The mood is one of high-stakes mental combat.\"}"
+      },
+      {
+        "title": "L'Habitant d'une Ville Flottante",
+        "prompt": "{\"prompt\": \"A whimsical, fantasy sci-fi portrait. The person lives in a beautiful, bustling city made of floating islands, connected by ornate bridges and flying vehicles. They are looking out from a balcony, surrounded by fantastical architecture and lush hanging gardens. The sky is filled with other floating islands and a colorful sunset. The style is imaginative, detailed, and optimistic, inspired by Hayao Miyazaki.\"}"
+      }
+    ]
+  }
+]

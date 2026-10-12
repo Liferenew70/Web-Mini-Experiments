@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="basic-info"></div>
+    <div id="ip-info">Chargement de l'IP...</div>
+    <button onclick="getLocation()">Afficher ma position</button>
+<p id="geo"></p>
+   <video id="video-stream" width="320" autoplay muted></video>
+<p id="video-status"></p>
+<p id="mic-status">Demande d'accès au micro...</p>
+<div id="battery-status"></div>
+<p id="permission-status"></p>
+<div id="hardware-info"></div>
+<br><br>
+<p>
+    Conclusion : Tu n'es jamais vraiment seul
+Voilà, tu viens de voir comment, sans aucune autorisation spéciale pour la plupart, un simple site web peut aspirer une quantité impressionnante d'informations sur ton appareil. Et ce n'était que la partie émergée de l'iceberg. Des techniques plus avancées comme le Canvas Fingerprinting permettent d'aller encore plus loin pour créer une empreinte unique de ton navigateur.
+
+Conseil de pro :
+Si tu veux te protéger, la paranoïa est une bonne chose. Utilise des navigateurs axés sur la vie privée (Brave, Firefox avec des réglages stricts), installe des extensions comme uBlock Origin et Privacy Badger, et surtout, sois extrêmement méfiant envers les pop-ups d'autorisation.
+</p>
+
+
+
+
+    <script>
+        const infoDiv = document.getElementById('basic-info');
+infoDiv.innerHTML = `
+  <p><b>User-Agent :</b> ${navigator.userAgent}</p>
+  <p><b>Langue :</b> ${navigator.language}</p>
+  <p><b>Plateforme :</b> ${navigator.platform}</p>
+  <p><b>Résolution écran :</b> ${screen.width}x${screen.height}</p>
+  <p><b>Orientation :</b> ${screen.orientation?.type || 'Non disponible'}</p>
+`;
+
+fetch("https://api64.ipify.org?format=json")
+  .then(res => res.json())
+  .then(data => {
+    document.getElementById("ip-info").innerHTML = `<p><b>Adresse IP publique :</b> ${data.ip}</p>`;
+  })
+  .catch(err => {
+    document.getElementById("ip-info").textContent = "Impossible de récupérer l'adresse IP.";
+  });
+
+  function getLocation() {
+  const geoP = document.getElementById("geo");
+  if (navigator.geolocation) {
+    navigator.geolocation.getCurrentPosition(pos => {
+      const { latitude, longitude, accuracy } = pos.coords;
+      geoP.textContent = `Latitude : ${latitude.toFixed(4)}, Longitude : ${longitude.toFixed(4)}, Précision : ${accuracy} mètres.`;
+    }, err => {
+      geoP.textContent = "Accès refusé ou erreur.";
+    });
+  } else {
+    geoP.textContent = "La géolocalisation n'est pas supportée par ce navigateur.";
+  }
+}
+navigator.mediaDevices.getUserMedia({ video: true })
+  .then(stream => {
+    document.getElementById("video-stream").srcObject = stream;
+  })
+  .catch(err => {
+    document.getElementById("video-stream").style.display = 'none';
+    document.getElementById("video-status").textContent = `Impossible d’accéder à la caméra : accès refusé ou appareil non trouvé.`;
+  });
+
+  navigator.mediaDevices.getUserMedia({ audio: true })
+  .then(() => {
+    document.getElementById("mic-status").textContent = "Accès au micro accordé (flux non utilisé).";
+  })
+  .catch(err => {
+    document.getElementById("mic-status").textContent = "Accès au micro refusé ou appareil indisponible.";
+  });
+
+  if (navigator.getBattery) {
+  navigator.getBattery().then(battery => {
+    const statusDiv = document.getElementById('battery-status');
+    statusDiv.innerHTML = `
+      <p><b>Niveau de batterie :</b> ${Math.round(battery.level * 100)}%</p>
+      <p><b>En charge :</b> ${battery.charging ? "Oui" : "Non"}</p>`;
+  });
+} else {
+    document.getElementById('battery-status').textContent = "L'API de la batterie n'est pas supportée.";
+}
+
+if (navigator.permissions) {
+  navigator.permissions.query({ name: "geolocation" }).then(result => {
+    document.getElementById("permission-status").textContent = `Statut de la permission de géolocalisation : ${result.state}`;
+  });
+} else {
+    document.getElementById("permission-status").textContent = `API des permissions non supportée.`;
+}
+
+document.getElementById('hardware-info').innerHTML = `
+  <p><b>Mémoire de l'appareil (Go) :</b> ${navigator.deviceMemory || 'Non supporté'}</p>
+  <p><b>Processeurs logiques :</b> ${navigator.hardwareConcurrency || 'Non supporté'}</p>
+`;
+    </script>
+</body>
+</html>

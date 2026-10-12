@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Joker_Smiler - Obfuscator Pro</title>
+    <!-- Balises Open Graph que vous aviez laissées en clair -->
+    <meta property="og:title" content="Obfuscator Pro - By Joker_Smiler">
+    <meta property="og:description" content="Protégez votre code avec une obfuscation multi-couches avancée.">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="https://i.postimg.cc/Y0Q709S3/obbb.png">
+    <meta property="og:image:alt" content="Code Obfuscator Pro - By Joker_Smiler">
+    <meta property="og:locale" content="fr_FR">
+    <style>
+        body {
+            font-family: 'Courier New', Courier, monospace;
+            background-color: #1a1a1a;
+            color: #00ff00;
+            text-align: center;
+            padding: 20px;
+        }
+        .container {
+            max-width: 800px;
+            margin: auto;
+            background-color: #000;
+            border: 2px solid #00ff00;
+            border-radius: 10px;
+            padding: 20px;
+            box-shadow: 0 0 20px #00ff00;
+        }
+        h1 {
+            color: #ff00ff;
+            text-shadow: 0 0 10px #ff00ff;
+        }
+        .matrix-text {
+            white-space: pre;
+            font-size: 14px;
+            text-align: left;
+            overflow: hidden;
+            border: 1px solid #00ff00;
+            padding: 10px;
+            height: 300px;
+            overflow-y: scroll;
+        }
+        footer {
+            margin-top: 20px;
+            font-size: 12px;
+        }
+        a {
+            color: #00ffff;
+            text-decoration: none;
+        }
+        a:hover {
+            text-shadow: 0 0 5px #00ffff;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Obfuscator Pro</h1>
+        <p>By <a href="https://t.me/Joker_smiler" target="_blank">Joker_Smiler</a> on Telegram</p>
+        <div class="matrix-text" id="matrix"></div>
+        <footer>
+            Protection de code avancée avec obfuscation multi-couches.
+        </footer>
+    </div>
+    <script>
+        const matrixContainer = document.getElementById('matrix');
+        const characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789@#$%^&*()_+-=[]{}|;:",.<>/?';
+        const codeToDisplay = `
+/*
+  Bienvenue sur Obfuscator Pro
+  Votre code est notre priorité.
+  Nous utilisons des techniques de
+  chiffrement avancées pour garantir
+  que votre travail reste sécurisé.
+  - Joker_Smiler
+*/
+
+function protect(code) {
+    let protectedCode = btoa(code);
+    return protectedCode;
+}
+        `.trim();
+
+        let currentIndex = 0;
+        function typeCode() {
+            if (currentIndex < codeToDisplay.length) {
+                matrixContainer.textContent += codeToDisplay[currentIndex];
+                currentIndex++;
+                matrixContainer.scrollTop = matrixContainer.scrollHeight;
+                setTimeout(typeCode, Math.random() * 50);
+            }
+        }
+
+        typeCode();
+    </script>
+</body>
+</html>
